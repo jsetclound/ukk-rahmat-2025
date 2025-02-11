@@ -11,7 +11,7 @@
 
     <!-- vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="assets/app.js" defer></script>
+
 </head>
 
 <body>
@@ -70,99 +70,39 @@
 
             <!-- To do list in the card-->
             <div class="row">
-                <!-- card one -->
+                <!-- card -->
+
                 <div class="col-md-6">
-                    <div class="card hover-drop-shadow mb-3">
-                        <h5 class="card-header">Pelantikan bantara pramuka</h5>
+                    <div class="card hover-drop-shadow">
+                        <h5 class="card-header">Featured</h5>
                         <div class="card-body">
                             <div class="align-items-center justify-content-center">
+                                <!-- input -->
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" v-model="newTask" placeholder="Tuliskan sesuatu.." @keyup.enter="addTask">
+                                    <button @click="addTask" class="btn btn-outline-secondary" type="button">Add task</button>
+                                </div>
                                 <div class="list-group">
-                                    <label class="list-group-item d-flex gap-3">
-                                        <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
-                                        <span class="pt-1 form-checked-content">
-                                            <strong>Packing akomodasi</strong>
-                                            <small class="d-block text-body-secondary">
-                                                <svg class="bi me-1" width="1em" height="1em">
-                                                    <use xlink:href="#calendar-event" />
-                                                </svg>
-                                                hari ini-1:00–2:00pm
-                                            </small>
-                                        </span>
-                                    </label>
-                                    <label class="list-group-item d-flex gap-3">
-                                        <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
-                                        <span class="pt-1 form-checked-content">
-                                            <strong>Uji coba tenda</strong>
-                                            <small class="d-block text-body-secondary">
-                                                <svg class="bi me-1" width="1em" height="1em">
-                                                    <use xlink:href="#calendar-event" />
-                                                </svg>
-                                                sore-1:00–2:00pm
-                                            </small>
-                                        </span>
-                                    </label>
-                                    <label class="list-group-item d-flex gap-3">
-                                        <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
-                                        <span class="pt-1 form-checked-content">
-                                            <strong>Pengumpulan surat izin orang tua</strong>
-                                            <small class="d-block text-body-secondary">
-                                                <svg class="bi me-1" width="1em" height="1em">
-                                                    <use xlink:href="#calendar-event" />
-                                                </svg>
-                                                hari ini-1:00–2:00pm
-                                            </small>
-                                        </span>
-                                    </label>
-                                    <label class="list-group-item d-flex gap-3 bg-body-tertiary">
-                                        <input class="form-check-input form-check-input-placeholder bg-body-tertiary flex-shrink-0 pe-none" disabled type="checkbox" value="" style="font-size: 1.375em;">
-                                        <span class="pt-1 form-checked-content">
-                                            <span contenteditable="true" class="w-100">Add new task...</span>
-                                            <small class="d-block text-body-secondary">
-                                                <svg class="bi me-1" width="1em" height="1em">
-                                                    <use xlink:href="#list-check" />
-                                                </svg>
-                                                Choose list...
-                                            </small>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of col-md-6 -->
 
-                <!-- card second -->
-                <div id="app">
-                    <div class="col-md-6">
-                        <div class="card hover-drop-shadow">
-                            <h5 class="card-header">Featured</h5>
-                            <div class="card-body">
-                                <div class="align-items-center justify-content-center">
-                                    <!-- input -->
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" v-model="inputText" placeholder="">
-                                        <button @click="addTask" class="btn btn-outline-secondary" type="button">Add task</button>
-                                    </div>
-                                    <div class="list-group">
-                                        <label class="list-group-item d-flex gap-3">
-                                            <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
-                                            <span class="pt-1 form-checked-content">
-                                                <strong>Finish sales report</strong>
-                                                <small class="d-block text-body-secondary">
-                                                    <svg class="bi me-1" width="1em" height="1em">
-                                                        <use xlink:href="#calendar-event" />
-                                                    </svg>
-                                                    1:00–2:00pm
-                                                </small>
-                                            </span>
-                                        </label>
-                                    </div>
+                                    <label class="list-group-item d-flex gap-3">
+                                        <input class="form-check-input flex-shrink-0" type="checkbox" value="" checked style="font-size: 1.375em;">
+                                        <span class="pt-1 form-checked-content">
+                                            <strong>Finish sales report</strong>
+                                            <small class="d-block text-body-secondary">
+                                                <svg class="bi me-1" width="1em" height="1em">
+                                                    <use xlink:href="#calendar-event" />
+                                                </svg>
+                                                Today
+                                            </small>
+                                        </span>
+                                    </label>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
 
             </div>
@@ -196,6 +136,8 @@
         </div>
     </main>
 
+    <!-- load app.js -->
+    <script src="assets/app.js"></script>
 </body>
 
 </html>

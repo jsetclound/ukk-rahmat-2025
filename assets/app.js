@@ -1,15 +1,18 @@
-const app = Vue.createApp({
-    data() {
-        return {
-            inputText: "hello",
-            Task: [],
-        };
+new Vue({
+    el: '#app',
+    data: {
+        newTodo: '',
+        todos: []
     },
     methods: {
-        addTask() {
-            this.Tasks.push(this.inputText);
-            this.inputText = "";
-        },
-    },
-});
-app.mount("#toDoList");
+        addTodo() {
+            if (this.newTodo) {
+                this.todos.push({
+                    id: Date.now(),
+                    text: this.newTodo
+                })
+                this.newTodo = ''
+            }
+        }
+    }
+})
